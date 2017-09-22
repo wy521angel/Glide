@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wy521angel.glidetest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--<meta-data-->
+        <!--android:name="com.example.wy521angel.glidetest.SimpleGlideModule"-->
+        <!--android:value="GlideModule" />-->
+
+        <!--<meta-data-->
+        <!--android:name="com.example.wy521angel.glidetest.UnsafeOkHttpGlideModule"-->
+        <!--android:value="GlideModule" />-->
+
+        <!--<meta-data-->
+        <!--android:name="com.example.wy521angel.glidetest.CustomImageSizeGlideModule"-->
+        <!--android:value="GlideModule" />-->
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoadAndShowActivity" />
+        <activity android:name=".GifAndCacheActivity" />
+        <activity android:name=".PriorityTestActivity" />
+        <activity android:name=".ThumbnailTestActivity" />
+        <activity android:name=".SimpleAndViewActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".ChangeActivity" />
+        <activity android:name=".CustomChangeActivity" />
+        <activity android:name=".ChangeSetActivity" />
+        <activity android:name=".AnimationActivity" />
+        <activity android:name=".AnimationForCustomViewActivity" />
+        <activity android:name=".MyGlideActivity" />
+        <activity android:name=".MyGlideForImgSizeActivity" />
+        <activity android:name=".RotateImgActivity" />
+
+
+        <!-- 声明widget对应的AppWidgetProvider -->
+        <receiver android:name=".ExampleAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.wy521angel.widget.UPDATE_ALL" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/example_appwidget_info" />
+        </receiver>
+
+    </application>
+
+</manifest>
